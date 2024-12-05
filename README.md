@@ -20,19 +20,33 @@ Second year of [Advent of Code](https://adventofcode.com/)!
 
 <br><br>
 
-### Personal times and notes:
+### Personal times:
 
 (Times are starting from when I actually opened each part of the puzzle)
+
+| Day | Started  | Part 1 Time to Solve | Part 2 Time to Solve |
+| --- | -------- | -------------------- | -------------------- |
+| 5   | 00:10:02 | 00:09:38             | 00:11:28             |
+| 4   | 00:00:00 | 00:46:33             | 00:06:23             |
+| 3   | 00:00:00 | 00:12:01             | 00:03:23             |
+| 2   | 00:00:00 | 00:08:15             | 01:12:59             |
+| 1   | 00:57:31 | 00:07:02             | 00:06:05             |
+
+### Personal notes:
 
 ## ⚠️ **Warning! Spoilers ahead** ⚠️
 
 <br><br>
 <br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
 
-| Day | Started  | Part 1 Time to Solve | Part 2 Time to Solve | Personal Notes                                                                                                                |
-| --- | -------- | -------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| 5   | 00:10:02 | 00:09:38             | 00:11:28             | Brute force + pypy is your friend                                                                                             |
-| 4   | 00:00:00 | 00:46:33             | 00:06:23             | Lil off by 1s everywhere in pt 1                                                                                              |
-| 3   | 00:00:00 | 00:12:01             | 00:03:23             | Relearning regex in pt 1 pays off!                                                                                            |
-| 2   | 00:00:00 | 00:08:15             | 01:12:59             | Clowned on pt 2 by checking every case (and messing that up) instead of brute forcing it; also lost ~30s to brief site outage |
-| 1   | 00:57:31 | 00:07:02             | 00:06:05             |                                                                                                                               |
+| Day | Personal Notes                                                                                                                |
+| --- | ----------------------------------------------------------------------------------------------------------------------------- |
+| 5   | Brute force + pypy is your friend                                                                                             |
+| 4   | Lil off by 1s everywhere in pt 1                                                                                              |
+| 3   | Relearning regex in pt 1 pays off!                                                                                            |
+| 2   | Clowned on pt 2 by checking every case (and messing that up) instead of brute forcing it; also lost ~30s to brief site outage |
+| 1   |                                                                                                                               |
