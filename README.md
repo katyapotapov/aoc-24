@@ -8,7 +8,7 @@ Second year of [Advent of Code](https://adventofcode.com/)!
 
 # Stats
 
-Official stats:
+### Official stats:
 
 | Day | Part 1 Time | Part 1 Rank | Part 1 Score | Part 2 Time | Part 2 Rank | Part 2 Score |
 | --- | ----------- | ----------- | ------------ | ----------- | ----------- | ------------ |
@@ -20,9 +20,14 @@ Official stats:
 
 <br><br>
 
-Personal times (starting from when I actually opened each part of the puzzle) and notes:
+### Personal times and notes:
 
-> **Warning! Spoilers ahead**
+(Times are starting from when I actually opened each part of the puzzle)
+
+## ⚠️ **Warning! Spoilers ahead** ⚠️
+
+<br><br>
+<br><br>
 
 | Day | Started  | Part 1 Time to Solve | Part 2 Time to Solve | Personal Notes                                                                                                                |
 | --- | -------- | -------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
