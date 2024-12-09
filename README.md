@@ -12,6 +12,7 @@ Second year of [Advent of Code](https://adventofcode.com/)!
 
 | Day | Part 1 Time | Part 1 Rank | Part 1 Score | Part 2 Time | Part 2 Rank | Part 2 Score |
 | --- | ----------- | ----------- | ------------ | ----------- | ----------- | ------------ |
+| 9   | 00:46:06    | 5838        | 0            | 00:59:40    | 2521        | 0            |
 | 8   | 01:02:20    | 7464        | 0            | 01:20:01    | 7107        | 0            |
 | 7   | >24h        | 51121       | 0            | >24h        | 48263       | 0            |
 | 6   | 00:33:36    | 6502        | 0            | 00:44:30    | 2865        | 0            |
@@ -29,6 +30,7 @@ Second year of [Advent of Code](https://adventofcode.com/)!
 
 | Day | Started  | Part 1 Time to Solve | Part 2 Time to Solve |
 | --- | -------- | -------------------- | -------------------- |
+| 9   | 00:00:00 | 00:46:06             | 00:13:34             |
 | 8   | 00:00:00 | 01:02:20             | 00:17:41             |
 | 7   | 25:33:46 | 00:07:38             | 00:08:29             |
 | 6   | 00:00:00 | 00:33:36             | 00:10:54             |
@@ -51,6 +53,7 @@ Second year of [Advent of Code](https://adventofcode.com/)!
 
 | Day | Personal Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 9   | Bit of a rollercoaster today - <br> - 📉 Started part 1 by misreading it as what turned out to be the part 2 problem <br> - 📈 After 20 minutes, realizing that IDs can be longer than 1 character in width <br> - 📈 Reading part 2, realizing that I'd already solved it <br> - 📉 Realizing that my solution had the same IDs issue <br> - 📈 Fixing the issue relatively quickly <br><br> All in all kind of a clown day but not awful.                            |
 | 8   | Didn't do day 7 yet - made some pretty silly mistakes and didn't read the question properly the first time (turns out "in line" is actually a meaningful term for solving the problem, not just exposition).                                                                                                                                                                                                                                                           |
 | 7   | Did this right after day 8 and it felt considerably easier. Might have gotten lucky though                                                                                                                                                                                                                                                                                                                                                                             |
 | 6   | Thought for a second that my brute force part 2 solution wouldn't complete in time -- again, pypy to the rescue. Slow start because I forgot that a path can overlap itself.<br><br> Also starting to notice some differences in my approach to implementing solutions this year, namely that I'm not as concerned with writing good-looking code and it's counterintuitively easier to read as a result (at least to me) and faster to write (and therefore more fun) |
