@@ -12,6 +12,7 @@ Second year of [Advent of Code](https://adventofcode.com/)!
 
 | Day | Part 1 Time | Part 1 Rank | Part 1 Score | Part 2 Time | Part 2 Rank | Part 2 Score |
 | --- | ----------- | ----------- | ------------ | ----------- | ----------- | ------------ |
+| 10  | 00:14:21    | 1881        | 0            | 00:15:50    | 1395        | 0            |
 | 9   | 00:46:06    | 5838        | 0            | 00:59:40    | 2521        | 0            |
 | 8   | 01:02:20    | 7464        | 0            | 01:20:01    | 7107        | 0            |
 | 7   | >24h        | 51121       | 0            | >24h        | 48263       | 0            |
@@ -30,6 +31,7 @@ Second year of [Advent of Code](https://adventofcode.com/)!
 
 | Day | Started  | Part 1 Time to Solve | Part 2 Time to Solve |
 | --- | -------- | -------------------- | -------------------- |
+| 10  | 00:00:00 | 00:14:21             | 00:01:29             |
 | 9   | 00:00:00 | 00:46:06             | 00:13:34             |
 | 8   | 00:00:00 | 01:02:20             | 00:17:41             |
 | 7   | 25:33:46 | 00:07:38             | 00:08:29             |
@@ -53,6 +55,7 @@ Second year of [Advent of Code](https://adventofcode.com/)!
 
 | Day | Personal Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10  | Feeling pretty slick today, but it seems like this was an easier problem for everybody. Lost about a minute on the second part due to getting used to nvim again (so nice to have an editor that doesn't corrupt edit history... looking at you VSCode...)                                                                                                                                                                                                             |
 | 9   | Bit of a rollercoaster today - <br> - 📉 Started part 1 by misreading it as what turned out to be the part 2 problem <br> - 📈 After 20 minutes, realizing that IDs can be longer than 1 character in width <br> - 📈 Reading part 2, realizing that I'd already solved it <br> - 📉 Realizing that my solution had the same IDs issue <br> - 📈 Fixing the issue relatively quickly <br><br> All in all kind of a clown day but not awful.                            |
 | 8   | Didn't do day 7 yet - made some pretty silly mistakes and didn't read the question properly the first time (turns out "in line" is actually a meaningful term for solving the problem, not just exposition).                                                                                                                                                                                                                                                           |
 | 7   | Did this right after day 8 and it felt considerably easier. Might have gotten lucky though                                                                                                                                                                                                                                                                                                                                                                             |
