@@ -12,7 +12,8 @@ Second year of [Advent of Code](https://adventofcode.com/)!
 
 | Day | Part 1 Time | Part 1 Rank | Part 1 Score | Part 2 Time | Part 2 Rank | Part 2 Score |
 | --- | ----------- | ----------- | ------------ | ----------- | ----------- | ------------ |
-| 12  | 00:35:58    | 4172        | 0            | 01:22:25    | 2879        | 0            |
+| 15  | 00:35:58\*  | 2795        | 0            | 01:44:48    | 2564        | 0            |
+| 12  | 00:35:58\*  | 4172        | 0            | 01:22:25    | 2879        | 0            |
 | 11  | 00:06:22    | 971         | 0            | 01:46:19    | 7276        | 0            |
 | 10  | 00:14:21    | 1881        | 0            | 00:15:50    | 1395        | 0            |
 | 9   | 00:46:06    | 5838        | 0            | 00:59:40    | 2521        | 0            |
@@ -25,6 +26,7 @@ Second year of [Advent of Code](https://adventofcode.com/)!
 | 2   | 00:08:15    | 1762        | 0            | 01:21:14    | 10432       | 0            |
 | 1   | 01:04:33    | 10474       | 0            | 01:10:38    | 9930        | 0            |
 
+\*Yes it actually took me the exact same amount of time to solve both Day 12 and Day 15 part 1 - I triple checked that I pasted the time in correctly. How unlikely!
 <br><br>
 
 ### Personal times:
@@ -33,6 +35,7 @@ Second year of [Advent of Code](https://adventofcode.com/)!
 
 | Day | Started  | Part 1 Time to Solve | Part 2 Time to Solve |
 | --- | -------- | -------------------- | -------------------- |
+| 15  | 00:00:00 | 00:35:58             | 01:08:50             |
 | 12  | 00:00:00 | 00:35:58             | 00:46:27             |
 | 11  | 00:00:00 | 00:06:22             | 01:39:57             |
 | 10  | 00:00:00 | 00:14:21             | 00:01:29             |
@@ -59,6 +62,7 @@ Second year of [Advent of Code](https://adventofcode.com/)!
 
 | Day | Personal Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 15  | Took a bit of a hiatus but it feels like the difficulty has gone down today. Not proud of my solution but it works. The hardest part was handling all the edge cases - luckily I was well rested today so keeping all the state in mind was easy. The most fun bug was a vacuous truth bug (on `all(maybe_move_boxes)`), and for the first time I had a valid reason to use `condition is True` instead of just `condition` (although I would never use that in production!!).                                                                                                                                                                            |
 | 12  | Decently happy with my solutions for both parts. For part 1 I just did a floodfill on each plot that hadn't been seen before and then counted the number of tiles adjacent to the garden. Part 2 was a bit wonky - I ended up scanning row-wise and then column-wise, and keeping track of the number of contiguous groups of the aforementioned adjacent tiles. (Lost a bit of time because I was checking adjacency by comparing the value of the tile, not whether it was in the current plot, so we'd fail on an adjacent plot with the same value.) After reading other solutions, counting corners seems to be the simplest possible approach here. |
 | 11  | From the highest of highs to the lowest of lows... for part 2 I thought of some variant of the pebble bucketing solution (ie just counting the number of pebbles with each engraving) many times, but kept getting stuck on the incorrect belief that I would still have to track the number of blinks that each new pebble has seen. <br><br>Eventually chanced upon a sort of halfway solution where I consolidate the pebbles if there are a lot of them, but it's somewhat slow (48s with pypy). But hey if it works it works! (Also if I'd thought of it right after part 1, it might have been one of the fastest to implement)                     |
 | 10  | Feeling pretty slick today, but it seems like this was an easier problem for everybody. Lost about a minute on the second part due to getting used to nvim again (so nice to have an editor that doesn't corrupt edit history... looking at you VSCode...)                                                                                                                                                                                                                                                                                                                                                                                                |
