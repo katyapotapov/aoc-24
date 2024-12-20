@@ -1,8 +1,8 @@
 from time import sleep
 
 
-# with open("input_full.txt") as f:
-with open("input.txt") as f:
+with open("input_full.txt") as f:
+    # with open("input.txt") as f:
     ls = f.readlines()
 
 ls = [list(l.strip()) for l in ls]
@@ -61,9 +61,9 @@ fair_len = get_shortest_path(e_pos, [(s_pos, [])])
 print(fair_len)
 
 memo_end_pos = []
-for i in range(1, len(ls)-1):
+for i in range(len(ls)):
     cur = []
-    for j in range(1, len(ls[0])-1):
+    for j in range(len(ls[0])):
         if ls[i][j] == "#":
             cur.append(-1)
         else:
@@ -71,9 +71,9 @@ for i in range(1, len(ls)-1):
     memo_end_pos.append(cur)
 
 memo_start_pos = []
-for i in range(1, len(ls)-1):
+for i in range(len(ls)):
     cur = []
-    for j in range(1, len(ls[0])-1):
+    for j in range(len(ls[0])):
         if ls[i][j] == "#":
             cur.append(-1)
         else:
@@ -96,15 +96,15 @@ print(one_width_adj)
 
 shortest_lens = []
 for f, s in one_width_adj:
-    f_len = get_shortest_path(f, [(s_pos, [])])
-    s_len = get_shortest_path(e_pos, [(s, [])])
+    f_len = memo_start_pos[f[0]][f[1]]
+    s_len = memo_end_pos[s[0]][s[1]]
     shortest_lens.append(f_len + s_len + 1)
 
     # reverse reverse!
-    s_len = get_shortest_path(s, [(s_pos, [])])
-    f_len = get_shortest_path(e_pos, [(f, [])])
+    s_len = memo_start_pos[s[0]][s[1]]
+    f_len = memo_end_pos[f[0]][f[1]]
     shortest_lens.append(f_len + s_len + 1)
 
 # 
-# print(len([l for l in shortest_lens if fair_len - l >= 100]))
-print(len([l for l in shortest_lens if fair_len - l >= 20]))
+print(len([l for l in shortest_lens if fair_len - l >= 100]))
+# print(len([l for l in shortest_lens if fair_len - l >= 20]))
