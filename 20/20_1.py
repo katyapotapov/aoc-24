@@ -2,7 +2,7 @@ from time import sleep
 
 
 with open("input_full.txt") as f:
-    # with open("input.txt") as f:
+# with open("input.txt") as f:
     ls = f.readlines()
 
 ls = [list(l.strip()) for l in ls]
@@ -36,49 +36,62 @@ def get_all_adjacent_dirs(i, j, vecs=None, not_vecs=None):
             adj.append((i + d[0], j + d[1]))
     return adj
 
-def get_shortest_path(e_pos, frontier, cutoff = None):
-    all_paths = []
+memo = {}
+for pos in [s_pos, e_pos]:
+    memo[pos] = []
+    for i in range(len(ls)):
+        cur = []
+        for j in range(len(ls[0])):
+            cur.append(-1)
+        memo[pos].append(cur)
+
+def get_shortest_path(e_pos, frontier):
+    path_lens = []
     while len(frontier) != 0:
         next_pos, pth = frontier.pop()
         if ls[next_pos[0]][next_pos[1]] == "#":
             continue
         elif next_pos in pth:
             continue
-        elif cutoff is not None and len(pth) > cutoff:
-            continue
+        elif e_pos in memo:
+            memo_end_pos = memo[e_pos]
+            if memo_end_pos[next_pos[0]][next_pos[1]] > -1:
+                path_lens.append(len(pth) + memo_end_pos[next_pos[0]][next_pos[1]])
         elif next_pos == e_pos:
-            all_paths.append((pth + [next_pos]))
+            path_lens.append(len(pth)+1)
         else:
             adj = get_all_adjacent_dirs(next_pos[0], next_pos[1])
             for a in adj:
                 frontier.append((a, pth.copy() + [next_pos]))
 
-    path_lens = [len(s) for s in all_paths]
     return min(path_lens) if path_lens else 1000000000
 
 
-fair_len = get_shortest_path(e_pos, [(s_pos, [])])
+def fill_memo(pos):
+    seen = []
+    frontier = [(pos, 0)]
+    cur_memo = memo[pos]
+    while len(frontier) > 0:
+        cur, d = frontier.pop()
+        mem = cur_memo[cur[0]][cur[1]]
+        if mem == -1 or mem > d+1:
+            cur_memo[cur[0]][cur[1]] = d+1 
+        elif mem <= d+1:
+            continue
+
+        adj = get_all_adjacent_dirs(cur[0], cur[1])
+        for a in adj:
+            frontier.append((a, d+1))
+        seen.append(cur)
+
+    memo[pos] = cur_memo
+
+fill_memo(s_pos)
+fill_memo(e_pos)
+
+fair_len = memo[s_pos][e_pos[0]][e_pos[1]]
 print(fair_len)
 
-memo_end_pos = []
-for i in range(len(ls)):
-    cur = []
-    for j in range(len(ls[0])):
-        if ls[i][j] == "#":
-            cur.append(-1)
-        else:
-            cur.append(get_shortest_path(e_pos, [((i, j), [])]))
-    memo_end_pos.append(cur)
-
-memo_start_pos = []
-for i in range(len(ls)):
-    cur = []
-    for j in range(len(ls[0])):
-        if ls[i][j] == "#":
-            cur.append(-1)
-        else:
-            cur.append(get_shortest_path(s_pos, [((i, j), [])]))
-    memo_start_pos.append(cur)
 
 # get all the blocks adjacent to 1-width blocks
 one_width_adj = []
@@ -92,19 +105,19 @@ for i in range(1, len(ls)-1):
             if len(ew) == 2:
                 one_width_adj.append(ew)
 
-print(one_width_adj)
 
 shortest_lens = []
 for f, s in one_width_adj:
-    f_len = memo_start_pos[f[0]][f[1]]
-    s_len = memo_end_pos[s[0]][s[1]]
+    f_len = memo[s_pos][f[0]][f[1]]
+    s_len = memo[e_pos][s[0]][s[1]]
     shortest_lens.append(f_len + s_len + 1)
 
     # reverse reverse!
-    s_len = memo_start_pos[s[0]][s[1]]
-    f_len = memo_end_pos[f[0]][f[1]]
+    s_len = memo[s_pos][s[0]][s[1]]
+    f_len = memo[e_pos][f[0]][f[1]]
     shortest_lens.append(f_len + s_len + 1)
 
 # 
+print(shortest_lens)
 print(len([l for l in shortest_lens if fair_len - l >= 100]))
 # print(len([l for l in shortest_lens if fair_len - l >= 20]))
