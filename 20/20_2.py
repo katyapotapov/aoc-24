@@ -2,7 +2,7 @@ from time import sleep
 
 
 with open("input_full.txt") as f:
-    # ith open("input.txt") as f:
+# with open("input.txt") as f:
     ls = f.readlines()
 
 ls = [list(l.strip()) for l in ls]
@@ -79,21 +79,23 @@ for i in range(1, len(ls)-1):
             all_empty.append((i, j))
 
 all_pairs = []
-for a in all_empty:
-    for b in all_empty:
-        if a != b:
-            all_pairs.append((a, b))
+for a in range(len(all_empty)):
+    for b in range(a+1, len(all_empty)):
+        all_pairs.append((all_empty[a], all_empty[b]))
+        all_pairs.append((all_empty[b], all_empty[a]))
 
 shortest_lens = []
 for f, s in all_pairs:
     cheat_dist = abs(f[0] - s[0]) + abs(f[1] - s[1])
-    if cheat_dist >= 20:
+    if cheat_dist > 20:
         continue
     f_len = memo[s_pos][f[0]][f[1]]
     s_len = memo[e_pos][s[0]][s[1]]
     shortest_lens.append(f_len + s_len + cheat_dist - 1)
 
 # 
+# for i in range(0, 100):
+#     print(f"{i=}, {len([l for l in shortest_lens if fair_len - l == i])=}")
 print(len([l for l in shortest_lens if fair_len - l >= 100]))
 # print(len([l for l in shortest_lens if fair_len - l == 50]))
 # print(len([l for l in shortest_lens if fair_len - l >= 20]))
